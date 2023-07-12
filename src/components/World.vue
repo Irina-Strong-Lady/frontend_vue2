@@ -1,6 +1,17 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <header>
+      <p>
+        For a Shark page
+        <a href="http://localhost:8080/shark">View Shark page</a>.
+      </p>
+      <p>
+        For a Games page
+        <a href="http://localhost:8080/games">View Games page</a>.
+      </p>
+    </header>
+    <hr style="display: flex; border: 1px solid grey; margin: 15px" />
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
