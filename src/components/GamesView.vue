@@ -2,10 +2,28 @@
   <div class="jumbotron vertical-center">
     <div class="container">
       <!-- bootswatch CDN -->
-      <link
+      <!-- <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css"
         integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
+        crossorigin="anonymous"
+      /> -->
+      <!-- <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"
+        integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK"
+        crossorigin="anonymous"
+      /> -->
+      <!-- <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css"
+        integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn"
+        crossorigin="anonymous"
+      /> -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"
+        integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
         crossorigin="anonymous"
       />
       <div class="row">
@@ -209,7 +227,7 @@ export default {
   methods: {
     //GET Function
     getGames() {
-      const path = "http://localhost:5000/games";
+      const path = "http://localhost:5000/";
       axios
         .get(path)
         .then((res) => {
@@ -221,7 +239,7 @@ export default {
     },
     //POST Games Function
     addGame(payload) {
-      const path = "http://localhost:5000/games";
+      const path = "http://localhost:5000/";
       axios
         .post(path, payload)
         .then(() => {
@@ -286,7 +304,7 @@ export default {
     },
     // Update Individual Game
     updateGame(payload, gameID) {
-      const path = `http://localhost:5000/games/${gameID}`;
+      const path = `http://localhost:5000/${gameID}`;
       axios
         .put(path, payload)
         .then(() => {
@@ -301,7 +319,7 @@ export default {
     },
     // Delete Inidividual Game
     removeGame(gameID) {
-      const path = `http://localhost:5000/games/${gameID}`;
+      const path = `http://localhost:5000/${gameID}`;
       axios
         .delete(path)
         .then(() => {
